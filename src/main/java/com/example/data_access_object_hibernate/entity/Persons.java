@@ -11,6 +11,7 @@ import java.io.Serializable;
 @Data
 @Builder
 @Entity
+@IdClass(PersonsId.class)
 @Table(name = "persons", schema = "hibernate")
 @NamedNativeQuery(
         name = "findPersonByCity",
