@@ -7,9 +7,9 @@ import java.util.Optional;
 
 public interface ServiceApp {
 
-    List<Persons> getPersonsByAge(Integer age);
-
     List<Persons> getPersonsByCity(String city);
+
+    List<Persons> getPersonsByAge(Integer age);
 
     Optional<Persons> getPersonsByNameAndSurname(String name, String surname);
 }

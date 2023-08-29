@@ -13,7 +13,7 @@ public interface PersonsRepository extends JpaRepository<Persons, PersonsId> {
 
     List<Persons> findByCity(String city);
 
-    List<Persons> findByAge(Integer age);
+    List<Persons> findByAgeLessThanOrderByAge(Integer age);
 
     Optional<Persons> findByNameAndSurname(String name, String surname);
 }
