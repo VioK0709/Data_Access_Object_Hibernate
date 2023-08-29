@@ -1,19 +1,15 @@
 package com.example.data_access_object_hibernate.service;
 
 import com.example.data_access_object_hibernate.entity.Persons;
-import com.example.data_access_object_hibernate.repository.RepositoryApp;
-import lombok.AllArgsConstructor;
-import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
-@AllArgsConstructor
-@Service
-public class ServiceApp {
+public interface ServiceApp {
 
-    private final RepositoryApp repositoryApp;
+    List<Persons> getPersonsByAge(Integer age);
 
-    public List<Persons> getCityOfLiving(String city) {
-        return repositoryApp.getPersonsByCity(city);
-    }
+    List<Persons> getPersonsByCity(String city);
+
+    Optional<Persons> getPersonsByNameAndSurname(String name, String surname);
 }

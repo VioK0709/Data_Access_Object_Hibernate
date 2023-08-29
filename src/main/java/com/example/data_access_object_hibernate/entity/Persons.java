@@ -13,9 +13,6 @@ import java.io.Serializable;
 @Entity
 @IdClass(PersonsId.class)
 @Table(name = "persons", schema = "hibernate")
-@NamedNativeQuery(
-        name = "findPersonByCity",
-        query = "select * from persons where city_of_living = :city")
 @AllArgsConstructor
 @NoArgsConstructor
 public class Persons implements Serializable {
