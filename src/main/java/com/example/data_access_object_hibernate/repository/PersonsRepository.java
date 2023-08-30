@@ -11,12 +11,12 @@ import java.util.Optional;
 
 @Repository
 public interface PersonsRepository extends JpaRepository<Persons, PersonsId> {
-    @Query("select * from persons where city = :city")
+    @Query("select p from Persons p where p.city = :city")
     List<Persons> findByCity(String city);
 
-    @Query("select * from persons where age < :age ORDER BY age ASC ")
-    List<Persons> findByAge(Integer age);
+    @Query("select p from Persons p where p.age < :age ORDER BY p.age ASC ")
+    List<Persons> findByAgeLessThanOrderByAge(Integer age);
 
-    @Query("select * from persons where name, surname =: name, surname")
+    @Query("select p from Persons p where p.name =:nane and p.surname =: surname")
     Optional<Persons> findByNameAndSurname(String name, String surname);
 }

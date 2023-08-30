@@ -21,7 +21,7 @@ public class ServiceAppImpl implements ServiceApp {
 
     @Override
     public List<Persons> getPersonsByAge(Integer age) {
-        return personsRepository.findByAge(age);
+        return personsRepository.findByAgeLessThanOrderByAge(age);
     }
 
     @Override
