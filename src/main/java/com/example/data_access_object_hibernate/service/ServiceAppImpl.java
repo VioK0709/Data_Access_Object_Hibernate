@@ -8,6 +8,7 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
+
 @AllArgsConstructor
 @Service
 public class ServiceAppImpl implements ServiceApp {
@@ -16,7 +17,7 @@ public class ServiceAppImpl implements ServiceApp {
 
     @Override
     public List<Persons> getPersonsByCity(String city) {
-        return personsRepository.findByCity(city);
+     return personsRepository.findByCity(city);
     }
 
     @Override
