@@ -40,7 +40,6 @@ public class SecurityApp {
                         .permitAll()
                         .anyRequest()
                         .authenticated());
-
         return null;
     }
 }
