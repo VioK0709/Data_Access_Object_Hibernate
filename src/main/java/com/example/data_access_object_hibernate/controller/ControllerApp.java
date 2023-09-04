@@ -3,6 +3,7 @@ package com.example.data_access_object_hibernate.controller;
 import com.example.data_access_object_hibernate.entity.Persons;
 import com.example.data_access_object_hibernate.service.ServiceApp;
 
+import org.springframework.security.access.annotation.Secured;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
